@@ -1,0 +1,25 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+.title {
+    font-family: 'Comic Neue', cursive;
+}
+</style>
+<nb-layout>
+
+  <nb-layout-header fixed>
+    
+    <h1 class="title">Trisapp</h1>
+  </nb-layout-header>
+
+  <nb-layout-column>
+    <app-board></app-board>
+    <router-outlet></router-outlet>
+    
+  </nb-layout-column>
+
+  <nb-layout-footer fixed>
+  <!-- Insert footer here -->
+  </nb-layout-footer>
+
+</nb-layout>

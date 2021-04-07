@@ -1,0 +1,32 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+.start {
+  transition-duration: 0.4s;
+  font-family: 'Comic Neue', cursive;
+  margin-bottom: 15px;
+
+}
+
+.start:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+.text{
+    font-family: 'Comic Neue', cursive;
+}
+
+</style>
+
+<h1 class="text">Current player: {{player}}</h1>
+<button class="start" (click)="newGame()">Start new game!</button>
+<h2 class="text" *ngIf="winner">Player {{winner}} won the game</h2>
+
+<main>
+    <app-square *ngFor="let val of squares; let i = index"
+                 [value]="val"
+                 (click)="makeMove(i)" [winnerPlayer]="winner"> 
+                
+    </app-square>
+</main>
